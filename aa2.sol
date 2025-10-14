@@ -9,7 +9,7 @@ contract EcoToken is ERC20, Ownable {
 
     constructor(uint256 initialSupply)
         ERC20("EcoToken", "ECO")
-        Ownable(msg.sender) // 👉 aquí pasamos el owner
+        Ownable(msg.sender) // aquí pasamos el owner
     {
         require(
             initialSupply * (10 ** decimals()) <= MAX_SUPPLY,
@@ -29,3 +29,4 @@ contract EcoToken is ERC20, Ownable {
 
     event TokensMinted(address indexed to, uint256 amount);
 }
+
